@@ -1,15 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Dimensions } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import Home from './screens/Home';
 
 
-// const styles = EStyleSheet.create({
-  
-// });
+const deviceWidth = Dimensions.get('window').width;
+
 
 EStyleSheet.build({
   $primaryBlue: '#4F6D7A',
+  $white: '#FFFFFF',
+  $lightGray: '#F0F0F0',
+  $deviceWidth: deviceWidth,
+  $primaryFontSize: 20,
+  $border: '#E2E2E2',
+  $inputText: '#797979',
 });
 // export default styles;
 
