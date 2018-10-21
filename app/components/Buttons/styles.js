@@ -14,7 +14,7 @@ const styles = EStyleSheet.create({
   },
   text: {
     color: '$white',
-    fontSize: `$primaryFontSize * ${3 / 4}`,
+    fontSize: '$basicFontSize',
     fontWeight: '300',
     paddingVertical: 20,
   },
