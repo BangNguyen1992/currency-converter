@@ -43,7 +43,7 @@ export default class Home extends Component {
   }
 
   handleOptionPress = () => {
-    console.log('object handleOptionPress');
+    this.props.navigation.navigate('Options');
   }
 
   render() {
