@@ -14,11 +14,14 @@
     "@expo/vector-icons": "^8.0.0",
     "color": "^3.1.0",
     "expo": "^30.0.1",
+    "hoist-non-react-statics": "^3.0.1",
     "moment": "^2.22.2",
     "prop-types": "^15.6.2",
-    "react": "16.3.1",
+    "react": "^16.5.2",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
-    "react-native-extended-stylesheet": "^0.10.0"
+    "react-native-dropdownalert": "^3.7.0",
+    "react-native-extended-stylesheet": "^0.10.0",
+    "react-navigation": "^2.18.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
