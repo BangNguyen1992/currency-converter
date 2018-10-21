@@ -4,7 +4,8 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 
 // import Home from './screens/Home';
 // import CurrencyList from './screens/CurrencyList';
-import Options from './screens/Options';
+// import Options from './screens/Options';
+import Themes from './screens/Themes';
 
 
 const deviceWidth = Dimensions.get('window').width;
@@ -14,6 +15,9 @@ EStyleSheet.build({
   $deviceWidth: deviceWidth,
 
   $primaryBlue: '#4F6D7A',
+  $primaryGreen: '#00BD9D',
+  $primaryOrange: '#D57A66',
+  $primaryPurple: '#9E768F',
   $white: '#FFFFFF',
   $lightGray: '#F0F0F0',
 
@@ -32,4 +36,4 @@ EStyleSheet.build({
 
 // export default () => <Home />;
 // export default () => <CurrencyList />;
-export default () => <Options />;
+export default () => <Themes />;
