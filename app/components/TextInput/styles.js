@@ -31,14 +31,14 @@ const styles = EStyleSheet.create({
   },
   buttonText: {
     fontWeight: '600',
-    fontSize: '$primaryFontSize',
+    fontSize: '$largeFontSize',
     paddingHorizontal: 16,
     color: '$primaryBlue',
   },
   input: {
     height: INPUT_HEIGHT,
     flex: 1,
-    fontSize: `$primaryFontSize - ${2}`,
+    fontSize: `$largeFontSize - ${2}`,
     paddingHorizontal: 8,
     color: '$inputText',
   },
