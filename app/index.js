@@ -1,9 +1,11 @@
 import React from 'react';
 import { Dimensions } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
+import { Provider } from 'react-redux';
 
 import Navigator from './config/routes';
 import { AlertProvider } from './components/Alert';
+import store from './config/store';
 
 
 const deviceWidth = Dimensions.get('window').width;
@@ -33,7 +35,9 @@ EStyleSheet.build({
 
 
 export default () => (
-  <AlertProvider>
-    <Navigator />
-  </AlertProvider>
+  <Provider store={store}>
+    <AlertProvider>
+      <Navigator onNavigationStateChange={null} />
+    </AlertProvider>
+  </Provider>
 );
