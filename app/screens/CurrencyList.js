@@ -14,10 +14,12 @@ class CurrencyList extends Component {
     dispatch: PropTypes.func,
     baseCurrency: PropTypes.string,
     quoteCurrency: PropTypes.string,
+    primaryColor: PropTypes.string,
   }
 
   handlePress = (currency) => {
     const { type } = this.props.navigation.state.params;
+
     if (type === 'base') {
       this.props.dispatch(changeBaseCurrency(currency));
     } else if (type === 'quote') {
@@ -43,6 +45,7 @@ class CurrencyList extends Component {
               text={item}
               selected={item === currentSelectedCurrency}
               onPress={() => this.handlePress(item)}
+              iconBackground={this.props.primaryColor}
             // checkmark={false}
             />
           )}
@@ -56,10 +59,12 @@ class CurrencyList extends Component {
 
 const mapStateToProps = (state) => {
   const { baseCurrency, quoteCurrency } = state.currencies;
+  const { primaryColor } = state.theme;
 
   return {
     baseCurrency,
     quoteCurrency,
+    primaryColor,
   };
 };
 

@@ -8,6 +8,10 @@ import styles from './styles';
 const ANIMATION_DURATION = 250;
 
 class Logo extends Component {
+  static propTypes = {
+    tintColor: PropTypes.string,
+  }
+
   containerImageSize = new Animated.Value(styles.$largeContainerSize)
 
   imageSize = new Animated.Value(styles.$largeImageSize)
@@ -60,6 +64,7 @@ class Logo extends Component {
     const imageStyle = [
       styles.logo,
       { width: this.imageSize },
+      this.props.tintColor ? { tintColor: this.props.tintColor } : null,
     ];
 
     return (
