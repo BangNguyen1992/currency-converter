@@ -1,9 +1,14 @@
 import { Dimensions } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-const imageWidth = Dimensions.get('window').width / 1.5;
+const imageWidth = Dimensions.get('window').width / 2;
 
 const styles = EStyleSheet.create({
+  $largeContainerSize: imageWidth,
+  $largeImageSize: imageWidth / 2,
+  $smallContainerSize: imageWidth / 2,
+  $smallImageSize: imageWidth / 4,
+
   container: {
     alignItems: 'center',
   },
@@ -11,11 +16,17 @@ const styles = EStyleSheet.create({
     // flex: 3,
     alignItems: 'center',
     justifyContent: 'center',
-    width: imageWidth,
-    height: imageWidth,
+    width: '$largeContainerSize',
+    height: '$largeContainerSize',
+  },
+  backgroundImage: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'stretch',
+    flex: 1,
   },
   image: {
-    width: imageWidth / 2,
+    width: '$largeImageSize',
   },
   text: {
     // flex: 1,
