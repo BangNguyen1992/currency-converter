@@ -23,7 +23,7 @@ class Options extends Component {
   }
 
   handleSitePress = () => {
-    Linking.openURL('http1s://fixer.io')
+    Linking.openURL('https://fixer.io')
       .catch(() => {
         this.props.alertWithType('error', 'Sorry!', 'Fixer.io cant be opened right now');
       });
