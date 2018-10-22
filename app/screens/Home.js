@@ -73,6 +73,9 @@ class Home extends Component {
     this.props.dispatch(swapCurrency());
   }
 
+  handleFetchData = () => {
+    this.props.dispatch(getInitialConversion());
+  }
 
   render() {
     let quotePrice = (this.props.amount * this.props.conversionRate).toFixed(2);
@@ -85,7 +88,7 @@ class Home extends Component {
         <StatusBar translucent={false} barStyle="light-content" />
         <Header onPress={this.handleOptionPress} />
         <KeyboardAvoidingView behavior="padding">
-          <Logo tintColor={this.props.primaryColor} />
+          <Logo tintColor={this.props.primaryColor} fetchData={this.handleFetchData} />
           <InputWithButton
             buttonText={this.props.baseCurrency}
             onPress={this.handlePressBaseCurrency}
