@@ -11,7 +11,7 @@ import { LastConverted } from '../components/Text';
 import { Header } from '../components/Header';
 import { connectAlert } from '../components/Alert';
 
-import { swapCurrency, changeCurrencyAmount, getInitialComversion } from '../actions/currencies';
+import { swapCurrency, changeCurrencyAmount, getInitialConversion } from '../actions/currencies';
 
 
 class Home extends Component {
@@ -34,7 +34,7 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    this.props.dispatch(getInitialComversion());
+    this.props.dispatch(getInitialConversion());
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
