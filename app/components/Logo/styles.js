@@ -25,7 +25,7 @@ const styles = EStyleSheet.create({
     alignSelf: 'stretch',
     flex: 1,
   },
-  image: {
+  logo: {
     width: '$largeImageSize',
   },
   text: {
