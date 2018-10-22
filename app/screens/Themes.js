@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ScrollView, StatusBar, Platform } from 'react-native';
+import { ScrollView, StatusBar, View } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import { connect } from 'react-redux';
 
@@ -9,6 +9,7 @@ import { changePrimaryColor } from '../actions/theme';
 
 const styles = EStyleSheet.create({
   $blue: '$primaryBlue',
+  $darkBlue: '$secondaryBlue',
   $green: '$primaryGreen',
   $orange: '$primaryOrange',
   $purple: '$primaryPurple',
@@ -29,50 +30,36 @@ class Themes extends Component {
     // console.log('object change theme color to ', color);
   }
 
+  renderThemeList = () => {
+    const themesArray = [
+      { text: 'Dark Blue', color: '$darkBlue' },
+      { text: 'Blue', color: '$blue' },
+      { text: 'Green', color: '$green' },
+      { text: 'Orange', color: '$orange' },
+      { text: 'Purple', color: '$purple' },
+    ];
+
+    return themesArray.map(theme => (
+      <View key={theme.text}>
+        <ListItem
+          text={theme.text}
+          onPress={() => this.handleThemePress(styles[theme.color])}
+          selected
+          checkmark={false}
+          iconBackground={styles[theme.color]}
+        />
+        <Separator />
+      </View>
+    ));
+  }
+
   render() {
     return (
       <ScrollView>
         <StatusBar translucent={false} barStyle="default" />
-        <ListItem
-          text="Blue"
-          onPress={() => this.handleThemePress(styles.$blue)}
-          selected
-          checkmark={false}
-          iconBackground={styles.$blue}
-        />
-        <Separator />
-        <ListItem
-          text="Green"
-          onPress={() => this.handleThemePress(styles.$green)}
-          selected
-          checkmark={false}
-          iconBackground={styles.$green}
-        />
-        <Separator />
-        <ListItem
-          text="Orange"
-          onPress={() => this.handleThemePress(styles.$orange)}
-          selected
-          checkmark={false}
-          iconBackground={styles.$orange}
-        />
-        <Separator />
-        <ListItem
-          text="Purple"
-          onPress={() => this.handleThemePress(styles.$purple)}
-          selected
-          checkmark={false}
-          iconBackground={styles.$purple}
-        />
-        <Separator />
+        {this.renderThemeList()}
       </ScrollView>
     );
-  }
-}
-
-const mapStateToProp = state => {
-  return {
-    
   }
 }
 
