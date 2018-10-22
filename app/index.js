@@ -14,7 +14,8 @@ const deviceWidth = Dimensions.get('window').width;
 EStyleSheet.build({
   $deviceWidth: deviceWidth,
 
-  $primaryBlue: '#4F6D7A',
+  $primaryBlue: '#438CCE',
+  $secondaryBlue: '#4F6D7A',
   $primaryGreen: '#00BD9D',
   $primaryOrange: '#D57A66',
   $primaryPurple: '#9E768F',
