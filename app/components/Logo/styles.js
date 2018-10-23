@@ -24,8 +24,6 @@ const styles = EStyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'stretch',
     flex: 1,
-    width: '$largeContainerSize',
-    height: '$largeContainerSize',
   },
   logo: {
     width: '$largeImageSize',
