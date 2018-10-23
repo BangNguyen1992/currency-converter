@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { View, ImageBackground, Text, Keyboard, Animated, Platform, Easing, TouchableOpacity } from 'react-native';
+import { SplashScreen } from 'expo';
+
 
 import styles from './styles';
 
@@ -119,6 +121,7 @@ class Logo extends Component {
                 resizeMode="contain"
                 style={imageStyle}
                 source={require('./images/logo.png')}
+                onLoadEnd={() => SplashScreen.hide()}
               />
             </TouchableOpacity>
           </ImageBackground>
