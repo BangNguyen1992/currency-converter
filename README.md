@@ -18,7 +18,7 @@ The demo only has 7 FPS, the real performance is smoother
 
 * Open external link with default browser on mobile
 
-* Deploy wusing Expo
+* Deploy using Expo
 
 
 ## Development
