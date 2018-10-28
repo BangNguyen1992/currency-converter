@@ -4,8 +4,6 @@ A simple React Native + Redux implementation.
 
 ## Demo:
 
-The demo only has 7 FPS, the real performance is smoother
-
 ![Demo](./demo/demo.gif)
 
 ## Features:
